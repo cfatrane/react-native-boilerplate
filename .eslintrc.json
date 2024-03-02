@@ -1,7 +1,7 @@
 {
-  "env": {
-    "react-native/react-native": true
-  },
+  // "env": {
+  //   "react-native/react-native": true
+  // },
   "extends": [
     "universe/native",
     "eslint:recommended",
@@ -21,15 +21,7 @@
     "import/order": [
       2,
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "type"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
         "newlines-between": "always",
         "pathGroups": [
           {
