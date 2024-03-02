@@ -1,0 +1,128 @@
+{
+  "env": {
+    "react-native/react-native": true
+  },
+  "extends": [
+    "universe/native",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "react-native", "no-relative-import-paths", "prettier"],
+  "rules": {
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "type"
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "api/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "assets/**",
+            "group": "internal",
+            "position": "after"
+          },
+
+          {
+            "pattern": "components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "constants/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "helpers/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "navigation",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "redux/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "screens/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "type/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "utils/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "distinctGroup": true,
+        "pathGroupsExcludedImportTypes": ["react"],
+        "alphabetize": {
+          "order": "asc" /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+          "caseInsensitive": true /* ignore case. Options: [true, false] */
+        }
+      }
+    ],
+
+    // N
+    "no-console": ["warn", { "allow": ["error"] }],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { "allowSameFolder": true, "rootDir": "./" }
+    ],
+
+    // React
+    "react/jsx-newline": 1,
+    "react/jsx-no-useless-fragment": [2, { "allowExpressions": true }],
+    "react/jsx-sort-props": [1, { "ignoreCase": true }],
+
+    // React Native
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    // "react-native/no-inline-styles": 2,
+    // "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 2,
+    "react-native/no-single-element-style-arrays": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": true
+      // "node": true
+    },
+    "import/extensions": [".js", ".jsx"]
+  }
+}
