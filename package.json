@@ -9,8 +9,11 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
     "ts:check": "tsc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rm -rf node_modules yarn.lock"
   },
   "dependencies": {
     "@eva-design/eva": "^2.2.0",
@@ -40,6 +43,7 @@
   },
   "private": true,
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }
