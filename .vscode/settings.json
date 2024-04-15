@@ -1,0 +1,28 @@
+{
+  // B
+  "better-comments.highlightPlainText": true,
+
+  // C
+  "cSpell.language": "en,fr",
+
+  // E
+  // Editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  // ErroLens
+  "errorLens.enabled": true,
+  // Eslint
+  "eslint.format.enable": true,
+
+  // F
+  // Files
+  "files.associations": { "*.css": "tailwindcss" },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
+}
