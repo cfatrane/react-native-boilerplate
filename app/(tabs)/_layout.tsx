@@ -17,6 +17,7 @@ export default function TabLayout() {
         }}
       />
 
+      {/* Refer to index,tsx */}
       <Tabs.Screen
         name="index"
         options={{
