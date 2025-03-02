@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@tanstack/eslint-plugin-query": "^5.28.11",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "~18.2.45",
     "eslint": "^8.57.0",
     "eslint-config-universe": "^12.0.0",
