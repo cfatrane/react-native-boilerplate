@@ -2266,17 +2266,17 @@
   dependencies:
     "@typescript-eslint/utils" "^6.20.0"
 
-"@tanstack/query-core@5.29.0":
-  version "5.29.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.29.0.tgz#d0b3d12c07d5a47f42ab0c1ed4f317106f3d4b20"
-  integrity sha512-WgPTRs58hm9CMzEr5jpISe8HXa3qKQ8CxewdYZeVnA54JrPY9B1CZiwsCoLpLkf0dGRZq+LcX5OiJb0bEsOFww==
+"@tanstack/query-core@5.77.1":
+  version "5.77.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.77.1.tgz#180ae89457f80e1b24f48a2f28e8eb1d348e213f"
+  integrity sha512-nfxVhy4UynChMFfN4NxwI8pktV9R3Zt/ROxOAe6pdOf8CigDLn26p+ex1YW5uien26BBICLmN0dTvIELHCs5vw==
 
-"@tanstack/react-query@^5.29.0":
-  version "5.29.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.29.0.tgz#42b3a2de4ed1d63666f0af04392a34b5e70d49c0"
-  integrity sha512-yxlhHB73jaBla6h5B6zPaGmQjokkzAhMHN4veotkPNiQ3Ac/mCxgABRZPsJJrgCTvhpcncBZcDBFxaR2B37vug==
+"@tanstack/react-query@^5.77.1":
+  version "5.77.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.77.1.tgz#89fb66e0fb3f6a1359cf171ca4e883e111d2a58f"
+  integrity sha512-qBwpxFg0+MZF0fICQwgvzwrVbcs7TdQlLyEd1f1dN83oeIALofCIAJHV7sPWu+BCS5tcXkG5CvOuf7yla8GYqQ==
   dependencies:
-    "@tanstack/query-core" "5.29.0"
+    "@tanstack/query-core" "5.77.1"
 
 "@types/cookie@^0.4.1":
   version "0.4.1"
