@@ -2,8 +2,9 @@
 
 ## Features 🛠️
 
-- [**Husky** 🐶](https://typicode.github.io/husky/) : Automatically lint your commit messages, code, and run tests upon committing or pushing.
-- [**Jest**](https://jestjs.io/) : For unit and integration testing
+- [**Husky** 🐶](https://typicode.github.io/husky/) : Runs lint-staged checks before each commit.
+- [**TanStack Query**](https://tanstack.com/query/latest/docs/framework/react/overview) : Manages, caches, and synchronizes server state.
+- [**NetInfo**](https://github.com/react-native-netinfo/react-native-netinfo) : Keeps TanStack Query synchronized with the native network status.
 - [**ESlint**](https://eslint.org/) : Statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
 - [**Prettier**](https://prettier.io/) : An opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 - [**VSCode**](https://marketplace.visualstudio.com/vscode) : Configuration file and recommended extensions
@@ -46,9 +47,7 @@ prepare: "husky install"
 ## Project Structure 📁
 
 ```bash
-├── .eslintcache
 ├── .eslintrc.js
-├── .expo
 ├── .gitignore
 ├── .husky
 ├── .prettierrc
@@ -62,11 +61,14 @@ prepare: "husky install"
 │   ├── favicon.png
 │   ├── icon.png
 │   └── splash.png
-├── babel.config.js
-├── components
-│   └── Button
+├── bun.lock
+├── bunfig.toml
 ├── expo-env.d.ts
 ├── package.json
+├── src
+│   └── hooks
+│       ├── useAppState.ts
+│       └── useOnlineManager.ts
 └── tsconfig.json
 ```
 
@@ -102,12 +104,11 @@ ErrorLens turbo-charges language diagnostic features by making diagnostics stand
 
 ## Learn More 🧠
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Expo and TanStack Query, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Expo Documentation](https://docs.expo.dev/) - learn about Expo and its APIs.
+- [Expo Router Documentation](https://docs.expo.dev/router/introduction/) - learn about file-based routing.
+- [TanStack Query React Native](https://tanstack.com/query/latest/docs/framework/react/react-native) - learn how to use TanStack Query with React Native.
 
 ## Suggestions ☝️
 
@@ -119,7 +120,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ### State Management
 
-- [Recoil](https://recoiljs.org/)
 - [Zustand](https://github.com/pmndrs/zustand)
 
 ### Validation
