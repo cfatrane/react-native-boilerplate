@@ -1,8 +1,7 @@
 import { Tabs } from "expo-router";
+import { SymbolView } from "expo-symbols";
 
 import React from "react";
-
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 export default function TabLayout() {
   return (
@@ -12,7 +11,11 @@ export default function TabLayout() {
         options={{
           title: "Settings",
           tabBarIcon: ({ color }) => (
-            <FontAwesome color={color} name="cog" size={28} />
+            <SymbolView
+              name={{ ios: "gearshape", android: "settings", web: "settings" }}
+              size={28}
+              tintColor={color}
+            />
           ),
         }}
       />
@@ -23,7 +26,11 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <FontAwesome color={color} name="home" size={28} />
+            <SymbolView
+              name={{ ios: "house", android: "home", web: "home" }}
+              size={28}
+              tintColor={color}
+            />
           ),
         }}
       />
@@ -33,7 +40,11 @@ export default function TabLayout() {
         options={{
           title: "Account",
           tabBarIcon: ({ color }) => (
-            <FontAwesome color={color} name="user" size={28} />
+            <SymbolView
+              name={{ ios: "person", android: "person", web: "person" }}
+              size={28}
+              tintColor={color}
+            />
           ),
         }}
       />
