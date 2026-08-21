@@ -16,38 +16,47 @@
 
 ## Getting Started 🤔
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 22.13 or later
+- Bun 1.3.14
+
+This project uses Bun as its package manager. Install the dependencies, then start the development server:
 
 ```bash
-npm run start
-# or
-yarn start
-# or
-pnpm start
-# or
+bun install
 bun start
 ```
 
-Open the Expo App on your phone and scan the QR Code.
+Open Expo Go on your phone and scan the QR code.
 
 ### Scripts
 
 ```bash
-start: "expo start",
-android: "expo start --android", # Start with an Android emulator
-ios: "expo start --ios", # Start with an iOS emulator
-web: "expo start --web",
-lint: "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-lint:debug: "eslint --debug",
-lint:fix: "eslint --fix .",
-ts:check: "tsc",
-prepare: "husky install"
+bun start          # Start the Expo development server
+bun run android    # Start Metro and open Expo Go on Android
+bun run ios        # Start Metro and open Expo Go in the iOS Simulator
+bun run web        # Start the web app
+bun run lint       # Run ESLint
+bun run lint:debug # Run ESLint in debug mode
+bun run lint:fix   # Fix ESLint issues
+bun run ts:check   # Run the TypeScript compiler
 ```
+
+The `android` and `ios` scripts match the Expo SDK 57 default CNG template. They start Metro and open the project in Expo Go without generating native project directories.
+
+To generate the native projects and compile local development builds instead, use:
+
+```bash
+bun expo run:android
+bun expo run:ios
+```
+
+These native build commands generate `android/` and `ios/` directories when they do not exist. Keep using the default scripts when Expo Go is sufficient.
 
 ## Project Structure 📁
 
 ```bash
-├── .eslintrc.js
 ├── .gitignore
 ├── .husky
 ├── .prettierrc
@@ -63,6 +72,7 @@ prepare: "husky install"
 │   └── splash.png
 ├── bun.lock
 ├── bunfig.toml
+├── eslint.config.js
 ├── expo-env.d.ts
 ├── package.json
 ├── src
@@ -90,9 +100,7 @@ With this extension, you will be able to categorize your annotations into:
 
 Integrates ESLint into VS Code. If you are new to ESLint check the documentation.
 
-The extension uses the ESLint library installed in the opened workspace folder. If the folder doesn't provide one the extension looks for a global install version. If you haven't installed ESLint either locally or globally do so by running npm install eslint in the workspace folder for a local install or `npm install -g eslint` for a global install.
-
-On new folders you might also need to create an .eslintrc configuration file. You can do this by either using the VS Code command Create ESLint configuration or by running the eslint command in a terminal with `npx eslint --init`.
+The extension uses the ESLint version and flat configuration installed in this workspace. Run `bun run lint` to perform the same checks from the terminal.
 
 ### [SonarLint](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
 
