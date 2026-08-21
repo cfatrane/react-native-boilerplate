@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  ignorePatterns: ["expo-env.d.ts"],
   extends: [
     "universe/native",
     "plugin:@tanstack/eslint-plugin-query/recommended",
