@@ -41,7 +41,7 @@
     "@tanstack/eslint-plugin-query": "5.101.4",
     "@types/react": "~19.2.4",
     "eslint": "^10.8.1",
-    "eslint-config-expo": "~57.0.1",
+    "eslint-config-expo": "~57.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.9.6",
